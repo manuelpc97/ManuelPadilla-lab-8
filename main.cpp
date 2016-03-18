@@ -6,7 +6,9 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <cstring>
 
+using std::strcpy;
 using std::string;
 using std::endl;
 using std::cin;
@@ -84,6 +86,7 @@ int main(int argc, char*argv[]){
 				cout << "Opcion invalida" << endl;
 			}			
 		}else if(opcion == 2){
+			cout << "****************TRansferencias****************" << endl;
 			mostrarObras(inventario);
 			cout << "Ingrese el numero de la obra que desea transferir: ";
 			cin >> pos;
@@ -95,10 +98,11 @@ int main(int argc, char*argv[]){
 				inventario.erase(inventario.begin() + pos-1);
 			}			
 		}else if(opcion == 3){
-			cout << "-------------Inventario----------" << endl;
+			cout << "***************Inventario*************" << endl;
 			mostrarObras(inventario);
 		}else if(opcion == 4){
-
+			cout << "**************Tranferencias**********" << endl;
+			mostrarObras(transferencias);
 		}else if(opcion == 5){
 			seguir = false;
 		}else{
