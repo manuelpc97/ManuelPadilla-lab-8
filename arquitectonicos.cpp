@@ -1,22 +1,22 @@
 #include "obrasArte.h"
-#include "pinturas.h"
+#include "arquitectonicos.h"
 #include <string>
 #include <sstream> 
 
 using std::string;
 using std::stringstream;
 
-pinturas::pinturas(string name,string autor,string date,string mat,string tec):obrasArte(name,autor,date) , material(mat), tecnica(tec){
+arquitectonicos::arquitectonicos(string name,string autor,string date,string mat):obrasArte(name,autor,date) , terreno(mat){
 
 }
 		
-pinturas::~pinturas(){
+arquitectonicos::~arquitectonicos(){
 
 }
 
-string pinturas::toString()const{
+string arquitectonicos::toString()const{
 	stringstream ss;
-	ss << "Pintura: \n";
+	ss << "Diseños Arquitectonicos: \n";
 	ss << obrasArte::toString();
 	return ss.str();
 
