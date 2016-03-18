@@ -14,9 +14,9 @@ obrasArte::~obrasArte(){
 
 }
 
-string toString()const{
+string obrasArte::toString()const{
 	stringstream ss;
-	ss << "Nombre: " << name << "\n";
+	ss << "Nombre: " << nombre << "\n";
 	ss << "Autor: " << autor << "\n";
 	ss << "Fecha: " << fecha << "\n";
 	return ss.str();
